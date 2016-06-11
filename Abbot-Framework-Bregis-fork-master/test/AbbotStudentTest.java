@@ -6,6 +6,9 @@ import abbot.tester.*;
 import abbot.finder.*;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
+import java.awt.event.*;
+import javax.swing.*;
+
 
 public class AbbotStudentTest extends ComponentTestFixture {
 	// ComponentTestFixture extends TestCase
@@ -17,8 +20,7 @@ public class AbbotStudentTest extends ComponentTestFixture {
 		BACFrameStudent w = new BACFrameStudent();
 		showWindow(w);
 	}
-
-	public void testComboBox() throws Exception {
+        	public void testComboBox() throws Exception {
 		//enterWeight("70");
 		JComboBox Sara = (JComboBox) getFinder().find(
 				new ComboBoxMatcher("Sara"));
