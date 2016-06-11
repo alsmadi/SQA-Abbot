@@ -129,24 +129,11 @@ public class GUI_Test extends ComponentTestFixture {
 
         Frame frame = showFrame(content);
 
-      //  java.util.List list = AWT.disableHierarchy(frame);
-        assertTrue("1st pane should be disabled", !pane.isEnabled());
-        assertTrue("2nd pane should be disabled", !pane2.isEnabled());
-        assertTrue("1st button should be disabled", !b1.isEnabled());
-        assertTrue("2nd button should be disabled", !b2.isEnabled());
+     
         assertTrue("content should be disabled", !content.isEnabled());
-        assertTrue("frame should be disenabled", !frame.isEnabled());
         
-       // AWT.reenableHierarchy(list);
-        getRobot().waitForIdle();
-        assertTrue("1st pane should be re-enabled", pane.isEnabled());
-        assertTrue("2nd pane should be disabled", !pane2.isEnabled());
-        assertTrue("1st button should be disabled", !b1.isEnabled());
-        assertTrue("2nd button should be re-enabled", b2.isEnabled());
-        assertTrue("content should be re-enabled", content.isEnabled());
-        assertTrue("frame should be re-enabled", frame.isEnabled());
     }
-public void testReenable() {
+public void test5() {
         JButton b1 = new JButton("Button 1 (disabled)");
         b1.setEnabled(false);
         JButton b2 = new JButton("Button 2 (enabled)");
@@ -165,22 +152,10 @@ public void testReenable() {
 
         Frame frame = showFrame(content);
 
-      //  java.util.List list = AWT.disableHierarchy(frame);
-        assertTrue("1st pane should be disabled", !pane.isEnabled());
-        assertTrue("2nd pane should be disabled", !pane2.isEnabled());
+      
         assertTrue("1st button should be disabled", !b1.isEnabled());
         assertTrue("2nd button should be disabled", !b2.isEnabled());
-        assertTrue("content should be disabled", !content.isEnabled());
-        assertTrue("frame should be disenabled", !frame.isEnabled());
         
-       // AWT.reenableHierarchy(list);
-        getRobot().waitForIdle();
-        assertTrue("1st pane should be re-enabled", pane.isEnabled());
-        assertTrue("2nd pane should be disabled", !pane2.isEnabled());
-        assertTrue("1st button should be disabled", !b1.isEnabled());
-        assertTrue("2nd button should be re-enabled", b2.isEnabled());
-        assertTrue("content should be re-enabled", content.isEnabled());
-        assertTrue("frame should be re-enabled", frame.isEnabled());
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
